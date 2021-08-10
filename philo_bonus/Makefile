@@ -6,7 +6,7 @@
 #    By: thsembel <thsembel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/04 15:34:38 by thsembel          #+#    #+#              #
-#    Updated: 2021/08/04 11:26:49 by user42           ###   ########.fr        #
+#    Updated: 2021/08/04 14:10:18 by thsembel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,9 +36,6 @@ OBJS		= ${SRCS:.c=.o}
 RM			= rm -f
 
 CFLAGS		= -Wall -Wextra -Werror
-
-#linux
-#CFLAGS		= -Wall -Wextra -Werror -lpthread
 
 .c.o:
 		@${CC} ${CFLAGS} -I${HEAD} -c $< -o ${<:.c=.o}

@@ -6,7 +6,7 @@
 /*   By: thsembel <thsembel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/04 14:33:03 by thsembel          #+#    #+#             */
-/*   Updated: 2021/08/03 17:58:12 by thsembel         ###   ########.fr       */
+/*   Updated: 2021/08/10 14:41:03 by thsembel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,8 @@ void	ft_stop_loop(t_info *info, t_philo *philo, int i)
 			return ;
 		i = 0;
 		while (info->n_meal != -667 && i < info->nb_philo
-			&& philo[i].mealed == info->n_meal - 1)
+			&& ((philo[i].mealed == info->n_meal - 1 && info->n_meal > 1)
+				|| (info->n_meal == 1 && philo[i].mealed == 1)))
 			i++;
 		if (i == info->nb_philo)
 			info->full_mealed = 1;
